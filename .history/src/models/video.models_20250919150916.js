@@ -1,0 +1,15 @@
+import mongooseAggregatePaginate from "mongoose-aggregate-paginate-v2";
+
+import mongoose from "mongoose";
+
+
+const videoSchema = new mongoose.Schema({
+    videoFile: {
+        type:String,//cloudinary 
+        required:true,
+    },
+    thumbnail: {
+        type: String,
+        req
+    }
+}, { timestamps: true });

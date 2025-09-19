@@ -1,0 +1,31 @@
+{
+  "name": "poduction-ready-backend",
+  "version": "1.0.0",
+  "description": "production-ready-backend",
+  "keywords": [
+    "javascript",
+    "node",
+    "backend"
+  ],
+  "license": "ISC",
+  "author": "Swarnabha Dutta",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon src/server.js"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10",
+    "prettier": "^3.6.2"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "mongodb": "^6.20.0",
+    "mongoose": "^8.18.1",
+    "mongoose-aggregate-paginate-v2": "^1.1.4"
+  }
+}
