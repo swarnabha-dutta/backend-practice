@@ -21,7 +21,7 @@ const registerUser = asyncHandler(async (req, res) => {
 
     const { fullName, email, username, password } = req.body
     //console.log("email: ", email);
-    console.log("req.files:", JSON.stringify(req.files, null, 2));
+    console.log(`📊 Files: ${JSON.} `);
     if (
         [fullName, email, username, password].some((field) => field?.trim() === "")
     ) {
@@ -79,9 +79,11 @@ const registerUser = asyncHandler(async (req, res) => {
         new ApiResponse(200, createdUser, "User registered Successfully")
     )
 
-});
+})
+
+
 
 export {
     registerUser,
-
+    
 }

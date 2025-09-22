@@ -51,7 +51,7 @@ const uploadOnCloudinary = async (localFilePath) => {
         console.log(`all response : ${JSON.stringify(response)}`);
         console.log("✅ File uploaded successfully:", response.url);
         console.log("🆔 Public ID:", response.public_id);
-        
+        console.log(``)
         return response;
 
     } catch (error) {

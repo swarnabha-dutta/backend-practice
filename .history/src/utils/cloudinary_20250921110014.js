@@ -13,11 +13,11 @@ const configureCloudinary = () => {
         });
 
         // Debug: Log all environment variables
-        // console.log("=== CLOUDINARY CONFIG DEBUG ===");
-        // console.log("CLOUD_NAME:", process.env.CLOUDINARY_CLOUD_NAME);
-        // console.log("API_KEY:", process.env.CLOUDINARY_API_KEY);
-        // console.log("API_SECRET:", process.env.CLOUDINARY_API_SECRET ? "SET" : "NOT SET");
-        // console.log("=== END DEBUG ===");
+        console.log("=== CLOUDINARY CONFIG DEBUG ===");
+        console.log("CLOUD_NAME:", process.env.CLOUDINARY_CLOUD_NAME);
+        console.log("API_KEY:", process.env.CLOUDINARY_API_KEY);
+        console.log("API_SECRET:", process.env.CLOUDINARY_API_SECRET ? "SET" : "NOT SET");
+        console.log("=== END DEBUG ===");
 
         isConfigured = true;
     }
@@ -39,8 +39,8 @@ const uploadOnCloudinary = async (localFilePath) => {
             return null;
         }
 
-        // console.log("📁 Uploading file:", localFilePath);
-        // console.log("📊 File size:", fs.statSync(localFilePath).size, "bytes");
+        console.log("📁 Uploading file:", localFilePath);
+        console.log("📊 File size:", fs.statSync(localFilePath).size, "bytes");
 
         const response = await cloudinary.uploader.upload(localFilePath, {
             resource_type: "auto"
@@ -48,10 +48,9 @@ const uploadOnCloudinary = async (localFilePath) => {
 
         // Delete file after successful upload
         fs.unlinkSync(localFilePath);
-        console.log(`all response : ${JSON.stringify(response)}`);
         console.log("✅ File uploaded successfully:", response.url);
         console.log("🆔 Public ID:", response.public_id);
-        
+
         return response;
 
     } catch (error) {

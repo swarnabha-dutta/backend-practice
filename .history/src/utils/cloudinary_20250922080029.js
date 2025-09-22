@@ -48,10 +48,10 @@ const uploadOnCloudinary = async (localFilePath) => {
 
         // Delete file after successful upload
         fs.unlinkSync(localFilePath);
-        console.log(`all response : ${JSON.stringify(response)}`);
-        console.log("✅ File uploaded successfully:", response.url);
-        console.log("🆔 Public ID:", response.public_id);
-        
+        // console.log(`all response : ${JSON.stringify(response)}`);
+        // console.log("✅ File uploaded successfully:", response.url);
+        // console.log("🆔 Public ID:", response.public_id);
+        // console.log(`📊 File size: ${response.files} `);
         return response;
 
     } catch (error) {
